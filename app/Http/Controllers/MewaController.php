@@ -12,7 +12,7 @@ class MewaController extends Controller
         $faker = \Faker\Factory::create('ar_SA');
 
         return response()->json([
-            'ID' => 8186,
+            'ID' => $faker->numberBetween(1,10000000),
             'NAME' => $faker->name,
             'NATIONALITY' => 'المملكة العربية السعودية',
             'MOBILE' => $faker->phoneNumber,
