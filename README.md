@@ -35,7 +35,6 @@ cd mewa_fake_api
 
 ## Usage
 
-## usage
 Method : `POST`
 URL : `http://localhost/animalnum/CamelApp/Data/SearchOwnerByBarcode`
 Headers :
