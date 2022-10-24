@@ -21,16 +21,35 @@ git clone git@github.com:abdallhsamy/mewa_fake_api.git
 cd mewa_fake_api
 ```
 
+3 download and install required dependencies
+```bash
+docker run --rm \
+            -u "$(id -u):$(id -g)" \
+            -v $(pwd):/opt \
+            -w /opt \
+            laravelsail/php81-composer:latest \
+            composer install --ignore-platform-reqs
+```
 
-3 pull and install the docker containers
+4 pull and install the docker containers
 
 ```bash
 ./vendor/bin/sail up
 ```
 
-4 install project dependencies
+5 install project dependencies
 ```bash
 ./vendor/bin/sail composer install
+```
+
+6 create `.env` file
+```bash
+cp .env.example .env 
+```
+
+7 generate app key
+```bash
+./vendor/bin/sail php artisan key:generate
 ```
 
 ## Usage
